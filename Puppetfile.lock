@@ -49,6 +49,11 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
+  remote: jeckhart/puppet-git
+  specs:
+    git (2.7.2)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-apt
   specs:
     apt (1.5.2)
@@ -79,11 +84,6 @@ GITHUBTARBALL
     gcc (2.2.0)
 
 GITHUBTARBALL
-  remote: telamonian/puppet-git
-  specs:
-    git (2.7.0)
-
-GITHUBTARBALL
   remote: telamonian/puppet-homebrew
   specs:
     homebrew (2.0.0)
@@ -104,7 +104,7 @@ DEPENDENCIES
   dnsmasq (= 1.0.1)
   foreman (= 1.2.0)
   gcc (= 2.2.0)
-  git (= 2.7.0)
+  git (= 2.7.2)
   go (= 1.1.0)
   homebrew (= 2.0.0)
   hub (= 1.4.0)
@@ -119,3 +119,4 @@ DEPENDENCIES
   ruby (= 8.2.0)
   stdlib (= 4.2.1)
   sudo (= 1.0.0)
+
