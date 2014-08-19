@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "boxen-linux",            "~> 2.7"
+gem "boxen-linux",            "~> 2.7", "!= 2.7.7"
 gem "hiera",                  "~> 1.3.3"
 gem "librarian-puppet",       "~> 1.0.7", "!= 1.0.8"
 gem "facter",                 "~> 2.0.2", "!= 2.1.0"
