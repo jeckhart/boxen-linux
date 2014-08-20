@@ -48,7 +48,7 @@ end
 
 github "dnsmasq",     "1.0.1"
 github "foreman",     "1.2.0"
-github "gcc",         "2.2.0", :repo => "telamonian/puppet-gcc"
+github "gcc",         "2.2.1", :repo => "wrose/puppet-gcc"
 github "git",         "2.7.2", :repo => "jeckhart/puppet-git"
 github "go",          "1.1.0"
 github "homebrew",    "2.0.0", :repo => "telamonian/puppet-homebrew"
