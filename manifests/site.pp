@@ -57,6 +57,12 @@ Repository {
   }
 }
 
+Repository <| provider == 'mercurial' |> {
+  extra    => undef,
+  config   => undef,
+  require  => undef,
+}
+
 Service {
   provider => ghlaunchd
 }
