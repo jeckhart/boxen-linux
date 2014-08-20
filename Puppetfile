@@ -67,7 +67,7 @@ github "sudo",        "1.0.0"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 github "java",        "1.7.2", :repo => "wrose/puppet-java"
-github "wget",        "1.0.0", :repo => "wrose/puppet-wget"
+github "wget",        "1.0.1", :repo => "wrose/puppet-wget"
 github "python",      "1.3.1", :repo => "wrose/puppet-python"
 github "mercurial",   "0.0.2", :repo => "wrose/puppet-mercurial"
 #github "chrome",      "1.1.2", :repo => "wrose/puppet-chrome"
