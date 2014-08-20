@@ -75,6 +75,7 @@ node default {
   include git
   include hub
   include java
+  include wget
   include python
   include mercurial
 # include nginx
