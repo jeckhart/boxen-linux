@@ -1,7 +1,22 @@
 class projects::yodlekeys {
 	require wget
 	include boxen::config
-	include augeas
+	#include augeas
+
+	if $osfamily=='Darwin' {
+	  package { 'augeas':
+	    ensure => present
+	  }
+	}
+	elsif $osfamily=='Debian' {
+    include apt
+    Exec <| title == "apt_update" |> {
+      user => 'root',
+    }
+    Package <| title == "libaugeas-ruby1.9.1" |> {
+      provider => apt,
+    }
+	}
 
 	$home = "/Users/${::boxen_user}"
   $sshdir = "$home/.ssh"
