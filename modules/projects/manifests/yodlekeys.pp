@@ -1,19 +1,16 @@
 class projects::yodlekeys {
 	require wget
 	include boxen::config
-	#include augeas
 
 	if $osfamily=='Darwin' {
+	  include homebrew
 	  package { 'augeas':
 	    ensure => present
 	  }
 	}
 	elsif $osfamily=='Debian' {
     include apt
-    Exec <| title == "apt_update" |> {
-      user => 'root',
-    }
-    Package <| title == "libaugeas-ruby1.9.1" |> {
+    package { "libaugeas-ruby1.9.1": 
       provider => apt,
     }
 	}
