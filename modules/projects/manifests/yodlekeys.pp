@@ -33,7 +33,7 @@ class projects::yodlekeys {
   }
 
 	file { "$sshdir/yodle-denv-bootstrap.pub":
-	  ensure => exists,
+	  ensure => file,
 	  owner  => $::boxen_user,
 	  mode   => 0644
 	}
