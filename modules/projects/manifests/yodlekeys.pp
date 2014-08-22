@@ -50,21 +50,16 @@ class projects::yodlekeys {
     mode   => 0644
   }
 
-  augeas { "$sshdir/config hg":
-    incl    => "$sshdir/config",
-    lens    => 'Ssh.lns',
-    changes => [
-      'defnode host Host[. = "hg dev-hg.dev.yodle.com"] "hg dev-hg.dev.yodle.com"',
-      'set $host/HostName "dev-hg.dev.yodle.com"',
-      'set $host/User "hg"',
-      "set \$host/IdentityFile \"$sshdir/yodle-denv-bootstrap\"",
-      'set $host/StrictHostKeyChecking no',
-      'defnode host Host[. = "git-ro ro.dev-git.dev.yodle.com"] "git-ro ro.dev-git.dev.yodle.com"',
-      'set $host/HostName "dev-git.dev.yodle.com"',
-      'set $host/User "git"',
-      "set \$host/IdentityFile \"$sshdir/yodle-denv-bootstrap\"",
-      'set $host/StrictHostKeyChecking no',
-    ],
-    require => [File[$sshdir],File["$sshdir/yodle-denv-bootstrap"]]
-  }
+  file { "$sshdir/config hg":
+    ensure  => present,
+    owner   => $::boxen_user,
+    require => [File[$sshdir],File["$sshdir/yodle-denv-bootstrap"]],
+    content => "
+Host hg
+HostName dev-hg.dev.yodle.com
+User hg
+IdentityFile $sshdir/yodle-denv-bootstrap
+StrictHostKeyChecking no
+"
+   }
 }
