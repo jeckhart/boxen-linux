@@ -1,11 +1,24 @@
 class projects::yodlecore {
-	include java
-	require mercurial
 	require projects::yodlekeys
+	include vcsrepo
+
+	if $osfamily=='Darwin'
+	  $group = 'staff'
+  else
+    $group = $::boxen_user
+  end
+
+	file { 'workspace':
+	  path => '/workspace',
+	  owner => $::boxen_user,
+    group => $group,
+    ensure => directory,
+    before => vcsrepo['yodlecore']
+	}
 	
-	repository {
+	vcsrepo {
 		'yodlecore':
-			source   => 'http://dev-hg.dev.yodle.com/yodlecore-central/',
+			source   => 'http://dev-hg.dev.yodle.com/yodlecore-central',
 			provider => 'mercurial',
 			path     => '/workspace/src/yodlecore';
 	}
