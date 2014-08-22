@@ -1,6 +1,5 @@
 class projects::yodlecore {
   require projects::yodlekeys
-  include vcsrepo
 
   if $osfamily=='Darwin' {
     $group = 'staff'
@@ -13,7 +12,7 @@ class projects::yodlecore {
     owner => $::boxen_user,
     group => $group,
     ensure => directory,
-    before => vcsrepo['yodlecore']
+    before => Repository['yodlecore']
   }
   
   repository {
