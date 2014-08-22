@@ -66,7 +66,7 @@ github "sudo",        "1.0.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
-github "vcsrepo",     "1.1.0", :repo => "puppetlabs/puppetlabs-augeas"
+github "vcsrepo",     "1.1.0", :repo => "puppetlabs/puppetlabs-vcsrepo"
 github "augeas",      "1.4.2", :repo => "wrose/puppet-augeas"
 github "java",        "1.7.2", :repo => "wrose/puppet-java"
 github "wget",        "1.3.6", :repo => "wrose/puppet-wget"
