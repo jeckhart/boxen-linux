@@ -50,7 +50,7 @@ class projects::yodlekeys {
     mode   => 0644
   }
 
-  file { "$sshdir/config hg":
+  file { "$sshdir/config":
     ensure  => present,
     owner   => $::boxen_user,
     require => [File[$sshdir],File["$sshdir/yodle-denv-bootstrap"]],

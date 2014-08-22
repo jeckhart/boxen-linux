@@ -1,5 +1,5 @@
 class projects::dev {
-	require projects::yodlecore
+	#require projects::yodlecore
 
 	package { "tomcat":
 	  ensure => present,
