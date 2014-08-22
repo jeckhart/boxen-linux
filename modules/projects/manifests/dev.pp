@@ -1,11 +1,11 @@
 class projects::dev {
-	#require projects::yodlecore
+  #require projects::yodlecore
 
-	package { "tomcat":
-	  ensure => present,
-	}
+  package { "tomcat":
+    ensure => present,
+  }
 
-	package { "jetty":
+  package { "jetty":
     ensure => present,
   }
 
