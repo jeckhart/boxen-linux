@@ -16,7 +16,7 @@ class projects::yodlecore {
     before => vcsrepo['yodlecore']
   }
   
-  vcsrepo {
+  repository {
     'yodlecore':
       source   => 'http://dev-hg.dev.yodle.com/yodlecore-central',
       provider => 'mercurial',
