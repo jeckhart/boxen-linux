@@ -59,13 +59,14 @@ github "nodejs",      "3.7.0"
 github "openssl",     "1.0.0"
 github "phantomjs",   "2.3.0"
 github "pkgconfig",   "1.0.0"
-github "repository",  "2.2.1", :repo => "wrose/puppet-repository"
+github "repository",  "2.3.0"#, :repo => "wrose/puppet-repository"
 github "ruby",        "8.2.0", :repo => "telamonian/puppet-ruby"
 github "stdlib",      "4.2.1", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
+github "vcsrepo",     "1.1.0", :repo => "puppetlabs/puppetlabs-augeas"
 github "augeas",      "1.4.2", :repo => "wrose/puppet-augeas"
 github "java",        "1.7.2", :repo => "wrose/puppet-java"
 github "wget",        "1.3.6", :repo => "wrose/puppet-wget"
