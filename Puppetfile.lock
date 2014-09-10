@@ -21,7 +21,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
-    nodejs (3.7.0)
+    nodejs (3.8.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-openssl
@@ -61,7 +61,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
-    inifile (1.0.3)
+    inifile (1.1.1)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
@@ -71,12 +71,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: ripienaar/puppet-module-data
   specs:
-    module-data (0.0.3)
+    module-data (0.0.4)
 
 GITHUBTARBALL
   remote: telamonian/puppet-boxen
   specs:
-    boxen (3.7.0)
+    boxen (3.7.1)
 
 GITHUBTARBALL
   remote: telamonian/puppet-gcc
@@ -100,7 +100,7 @@ GITHUBTARBALL
 
 DEPENDENCIES
   apt (= 1.5.2)
-  boxen (= 3.7.0)
+  boxen (= 3.7.1)
   dnsmasq (= 1.0.1)
   foreman (= 1.2.0)
   gcc (= 2.2.0)
@@ -108,10 +108,10 @@ DEPENDENCIES
   go (= 1.1.0)
   homebrew (= 2.0.0)
   hub (= 1.4.0)
-  inifile (= 1.0.3)
-  module-data (= 0.0.3)
+  inifile (= 1.1.1)
+  module-data (= 0.0.4)
   nginx (= 1.4.3)
-  nodejs (= 3.7.0)
+  nodejs (= 3.8.1)
   openssl (= 1.0.0)
   phantomjs (= 2.3.0)
   pkgconfig (= 1.0.0)

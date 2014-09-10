@@ -1,3 +1,4 @@
+
 if $::osfamily == 'Debian'
 {
   stage { 'pre':
@@ -62,6 +63,15 @@ Service {
 }
 
 Homebrew::Formula <| |> -> Package <| provider != apt |>
+
+# if a homebrew package build fails with a message like "Illegal instruction: 4" on a vbox VM, add the package title to $bottle_broken_packages
+if ($::virtual == 'virtualbox' and $::osfamily == 'Darwin')
+{
+  $bottle_broken_packages = [ 'boxen/brews/gcc48' ]
+  class {'boxen::bottle_fixes':
+    formula_titles => $bottle_broken_packages,
+  }
+}
 
 node default {
   # core modules, needed for most things
